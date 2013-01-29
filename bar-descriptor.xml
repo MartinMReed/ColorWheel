@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+    <id>net.hardisonbrewing.ColorWheel</id>
+    <name>Color Wheel</name>
+    <versionNumber>1.0.0</versionNumber>
+    <buildId>2</buildId>
+    
+    <description>The ColorWheel application</description>
+    <author>Martin M Reed</author>
+
+    <initialWindow>
+        <aspectRatio>portrait</aspectRatio>
+        <autoOrients>false</autoOrients>
+        <systemChrome>none</systemChrome>
+        <transparent>false</transparent>
+    </initialWindow>
+
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7-g/ColorWheel" entry="true" type="Qnx/Elf">ColorWheel</asset>
+    </configuration>
+    <configuration name="Device-Release">
+       <entryPointType>Qnx/Cascades</entryPointType>
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7/ColorWheel.so" entry="true" type="Qnx/Elf">ColorWheel.so</asset>
+    </configuration>
+    <configuration name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm-p/o.le-v7-g/ColorWheel" entry="true" type="Qnx/Elf">ColorWheel</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="x86/o-g/ColorWheel" entry="true" type="Qnx/Elf">ColorWheel</asset>
+    </configuration>
+
+    <icon>
+       <image>assets/icon.png</image>
+    </icon>
+    
+    <asset path="assets">assets</asset>
+
+    <permission system="true">run_native</permission>
+
+    <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+
+</qnx>
